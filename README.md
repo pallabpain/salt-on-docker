@@ -18,18 +18,24 @@ git clone https://github.com/pallabpain/salt-on-docker.git
 
 cd  salt-on-docker
 
-docker-compose up
+docker-compose up -d
+```
+Runing the above command will bring up the salt-stack with 1 master and 1 minion. <br/>
+
+In order to monitor the logs, you can run the following in a separate terminal window
+```bash
+docker-compose logs -f
 ```
 
-Runing the above command will bring up the salt-stack with 1 master and 1 minion. To scale the number of minions, run the following
+To scale the number of minions, run the following
 
 ```bash
-docker-compose up --scale salt-minion=3
+docker-compose up --scale salt-minion=3 -d
 ```
 The above command will create 3 `salt-minion` containers <br/>
 In order to access the `salt-master` container in order to execute the following command from the `salt-on-docker` directory
 ```bash
-docker-compose up exec salt-master bash
+docker-compose exec salt-master bash
 ```
 Once you are in the shell of the `salt-master`, you can quickly run the following to test remote execution on all your `salt-minion` containers
 ```bash
