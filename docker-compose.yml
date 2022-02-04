@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  salt-master:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: salt-base:latest
+    entrypoint: [ "./master.sh" ]
+  salt-minion:
+    image: salt-base:latest
+    entrypoint: [ "./minion.sh" ]
+    depends_on:
+      - salt-master
