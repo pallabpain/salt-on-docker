@@ -15,9 +15,11 @@ To bring up the stack, run the following
 
 ```bash
 git clone https://github.com/pallabpain/salt-on-docker.git
+cd salt-on-docker
 
-cd  salt-on-docker
-
+# Build the salt-base:latest image
+docker-compose build
+# Bring up the stack
 docker-compose up -d
 ```
 Runing the above command will bring up the salt-stack with 1 master and 1 minion. <br/>
