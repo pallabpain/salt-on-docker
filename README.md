@@ -3,6 +3,8 @@ Bring up a simple salt-stack on your system to play around or dry run your confi
 
 This repo is based on this tutorial by [Tim White](https://timlwhite.medium.com/the-simplest-way-to-learn-saltstack-cd9f5edbc967).
 
+[![asciicast](https://asciinema.org/a/466699.svg)](https://asciinema.org/a/466699)
+
 ## Pre-requisites
 - `git`
 - `docker`
